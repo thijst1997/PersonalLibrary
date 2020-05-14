@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".ui.info.BookInfoActivity">
+
+    <ImageView
+        android:id="@+id/ivBookCover"
+        android:layout_width="144dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPageCount"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvISBN"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/icon_camera" />
+
+    <EditText
+        android:id="@+id/tvISBN"
+        android:layout_width="144dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@null"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintEnd_toEndOf="@+id/tvISBN"
+        app:layout_constraintStart_toStartOf="@+id/tvISBN"
+        app:layout_constraintTop_toBottomOf="@+id/tvISBN" />
+
+    <EditText
+        android:id="@+id/tvAuthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <EditText
+        android:id="@+id/tvPublisher"
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintStart_toStartOf="@+id/tvAuthor"
+        app:layout_constraintTop_toBottomOf="@+id/tvAuthor" />
+
+    <EditText
+        android:id="@+id/tvPublishDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPublisher"
+        app:layout_constraintEnd_toEndOf="@+id/tvAuthor"
+        app:layout_constraintStart_toEndOf="@+id/tvPublisher"
+        app:layout_constraintTop_toTopOf="@+id/tvPublisher"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/tvPageCount"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintEnd_toStartOf="@+id/tvPublishDate"
+        app:layout_constraintStart_toStartOf="@+id/tvPublisher"
+        app:layout_constraintTop_toBottomOf="@+id/tvPublisher" />
+
+    <EditText
+        android:id="@+id/tvLanguage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPageCount"
+        app:layout_constraintEnd_toEndOf="@+id/tvPublishDate"
+        app:layout_constraintStart_toEndOf="@+id/tvPageCount"
+        app:layout_constraintTop_toTopOf="@+id/tvPageCount"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/tvDescription"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:background="@null"
+        android:inputType="textMultiLine"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintEnd_toEndOf="@+id/tvLanguage"
+        app:layout_constraintStart_toStartOf="@+id/spinnerStatus"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerStatus" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="205dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="@+id/ivBookCover"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/ivBookCover"
+        app:layout_constraintTop_toBottomOf="@+id/ivBookCover" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_isbn"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvISBN"
+        app:layout_constraintStart_toStartOf="@+id/tvISBN" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_title"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_author"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvAuthor"
+        app:layout_constraintStart_toStartOf="@+id/tvAuthor" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_publisher"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPublisher"
+        app:layout_constraintStart_toStartOf="@+id/tvPublisher" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_publishDate"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPublishDate"
+        app:layout_constraintStart_toStartOf="@+id/tvPublishDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvAuthor"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_pages"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPageCount"
+        app:layout_constraintStart_toStartOf="@+id/tvPageCount" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_language"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvLanguage"
+        app:layout_constraintStart_toStartOf="@+id/tvLanguage" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_description"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvDescription"
+        app:layout_constraintStart_toStartOf="@+id/spinnerStatus" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_status"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerStatus"
+        app:layout_constraintStart_toStartOf="@+id/spinnerStatus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

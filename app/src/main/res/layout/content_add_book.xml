@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Vertical50Guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:theme="@style/TextInputLayoutAppearance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etISBN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/resource_hashtag"
+            android:drawableLeft="@drawable/resource_hashtag"
+            android:drawablePadding="10dp"
+            android:hint="@string/hint_isbn"
+            android:textColor="#FFFFFF" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:theme="@style/TextInputLayoutAppearance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextInputLayout1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/resource_tag"
+            android:drawableStart="@drawable/resource_tag"
+            android:hint="@string/hint_title"
+            android:textColor="#FFFFFF"
+            android:drawablePadding="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:theme="@style/TextInputLayoutAppearance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextInputLayout2">
+
+        <AutoCompleteTextView
+            android:id="@+id/etSeries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/resource_bookstack"
+            android:drawableStart="@drawable/resource_bookstack"
+            android:hint="@string/hint_series"
+            android:textColor="#FFFFFF"
+            android:drawablePadding="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:theme="@style/TextInputLayoutAppearance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextInputLayout3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/resource_user"
+            android:drawableStart="@drawable/resource_user"
+            android:hint="@string/hint_author"
+            android:textColor="#FFFFFF"
+            android:drawablePadding="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayout5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/TextInputLayoutAppearance"
+        app:layout_constraintEnd_toStartOf="@+id/Vertical50Guideline"
+        app:layout_constraintStart_toStartOf="@+id/TextInputLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/TextInputLayout4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPublisher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/resource_factory"
+            android:drawableLeft="@drawable/resource_factory"
+            android:drawablePadding="10dp"
+            android:hint="@string/hint_publisher"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayout6"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:theme="@style/TextInputLayoutAppearance"
+        app:layout_constraintEnd_toEndOf="@+id/TextInputLayout4"
+        app:layout_constraintStart_toStartOf="@+id/Vertical50Guideline"
+        app:layout_constraintTop_toBottomOf="@+id/TextInputLayout4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPublishDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/resource_calendar"
+            android:drawableStart="@drawable/resource_calendar"
+            android:hint="@string/hint_publishDate"
+            android:textColor="#FFFFFF"
+            android:drawablePadding="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayout7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/TextInputLayoutAppearance"
+        app:layout_constraintEnd_toEndOf="@+id/TextInputLayout6"
+        app:layout_constraintStart_toStartOf="@+id/TextInputLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/TextInputLayout6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/resource_language"
+            android:drawableStart="@drawable/resource_language"
+            android:hint="@string/hint_language"
+            android:textColor="#FFFFFF"
+            android:drawablePadding="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayout8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/TextInputLayoutAppearance"
+        app:layout_constraintEnd_toEndOf="@+id/TextInputLayout7"
+        app:layout_constraintStart_toStartOf="@+id/TextInputLayout7"
+        app:layout_constraintTop_toBottomOf="@+id/TextInputLayout7">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPageNr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/resource_pages"
+            android:drawableStart="@drawable/resource_pages"
+            android:hint="@string/hint_pages"
+            android:textColor="#FFFFFF"
+            android:drawablePadding="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinnerStatus"
+        android:layout_width="196dp"
+        android:layout_height="38dp"
+        app:layout_constraintEnd_toEndOf="@+id/TextInputLayout8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TextInputLayout8"
+        app:layout_constraintTop_toBottomOf="@+id/TextInputLayout8" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorMarine"
+        android:text="@string/btnSubmit"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/TextInputLayout9"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="@+id/TextInputLayout9"
+        app:layout_constraintTop_toBottomOf="@+id/TextInputLayout9" />
+
+    <ImageView
+        android:id="@+id/ivBookCover"
+        android:layout_width="90dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/Vertical50Guideline"
+        app:layout_constraintStart_toStartOf="@+id/TextInputLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/TextInputLayout5"
+        app:srcCompat="@drawable/icon_camera" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayout9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/TextInputLayoutAppearance"
+        app:layout_constraintEnd_toEndOf="@+id/TextInputLayout7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TextInputLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/ivBookCover">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/resource_write"
+            android:drawableLeft="@drawable/resource_write"
+            android:drawablePadding="10dp"
+            android:hint="@string/hint_description"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

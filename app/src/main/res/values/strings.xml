@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Catalog Of Entertainment</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_isbn">ISBN</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_series">Name of series (optional)</string>
+    <string name="hint_author">Author</string>
+    <string name="hint_publisher">Publisher</string>
+    <string name="hint_publishDate">Published Date</string>
+    <string name="hint_language">Language</string>
+    <string name="hint_pages">Number of Pages</string>
+    <string name="hint_status">Reading Status</string>
+    <string name="hint_description">Description</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="addBook">Add your book!</string>
+
+    <string-array name="BookStatus">
+        <item name="pending">Pending</item>
+        <item name='in_progress'>In progress</item>
+        <item name='completed'>Completed</item>
+    </string-array>
+
+</resources>
